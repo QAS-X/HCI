@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园app</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.5;
+            color: #2c3e50;
+            margin: 0;
+            padding-top: 70px; /* 添加顶部内边距避免内容被导航栏遮挡 */
+        }
+        .team-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #34495e;
+        }
+        .project-description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        .section {
+            margin-bottom: 3rem;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .pdf-download {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            margin: 2rem auto;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .pdf-download:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #95a5a6;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .nav-link {
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #3498db;
+        }
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .container {
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 - 添加 fixed-top 类 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand team-name" href="#">校园App研究团队</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team-intro">团队介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project-proposal">项目提案</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#data-collection">数据收集计划</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#report-download">PDF 下载</a>
+                    </li> -->   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div class="container mt-4">
+        <!-- 团队介绍 -->
+        <section id="team-intro" class="section">
+            <h1 class="team-name">项目主旨</h1>
+            <p class="project-description">本项目旨在开发一款综合型校园App，提供一个统一、高效的数字平台，为学生打造一站式校园生活解决方案。</p>
+            <h2>团队成员</h2>
+            <ul>
+                <li>丁润恒 - 负责访谈设计与执行</li>
+                <li>吴雨铉 - 负责问卷设计与数据分析</li>
+                <li>赵庆林 - 负责项目网页设计</li>
+            </ul>
+        </section>
+
+        <!-- 项目提案 -->
+        <section id="project-proposal" class="section">
+            <h2>项目提案</h2>
+            <h3>研究问题/需求分析</h3>
+            <p>基于10位计算机专业学生问卷和4位深度访谈，发现校园服务存在三大核心问题：</p>
+            <ul>
+                <li><strong>信息碎片化</strong>：85%受访者反映课程、活动、通知分散在不同平台</li>
+                <li><strong>系统不互通</strong>：70%用户遭遇数据同步问题（如课程表与日历分离）</li>
+                <li><strong>功能体验差</strong>：导航功能缺失、通知过载、界面复杂</li>
+            </ul>
+            
+            <h3>研究目标与假设</h3>
+            <p><strong>核心目标</strong>：设计整合型校园App，实现：
+                <ul>
+                    <li>三合一平台：课程管理+校园服务+社交互动</li>
+                    <li>自动化同步：100%课程数据自动同步</li>
+                    <li>智能通知：分级消息推送系统</li>
+                </ul>
+            <strong>核心假设</strong>：统一平台可使任务处理效率提升40%（问卷显示用户平均满意度仅2.8/5）
+            </p>
+            
+            <h3>方法论</h3>
+            <ol>
+                <li><strong>定性研究</strong>：4场半结构化访谈，聚焦：
+                    <ul>
+                        <li>用户旅程地图绘制</li>
+                        <li>功能优先级排序</li>
+                    </ul>
+                </li>
+                <li><strong>定量验证</strong>：扩展问卷至30+样本：
+                    <ul>
+                        <li>5点量表题：评估8大功能需求强度</li>
+                        <li>开放式问题：收集具体场景痛点</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <!-- 数据收集计划 -->
+        <section id="data-collection" class="section">
+            <h2>数据收集计划</h2>
+            <h3>访谈对象（4人）</h3>
+            <p>采用<strong>年级分层抽样</strong>：
+                <ul>
+                    <li>本科生3人（大一/大二/大四各1）</li>
+                    <li>研究生1人（研一）</li>
+                    <li>筛选标准：计算机专业+高频App使用者</li>
+                </ul>
+            </p>
+            
+            <h3>问卷设计</h3>
+            <p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>模块</th>
+                            <th>问题类型</th>
+                            <th>样本量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>基础功能需求</td>
+                            <td>5点量表（如"课程同步重要性？"）</td>
+                            <td rowspan="3">30+（计算机专业全覆盖）</td>
+                        </tr>
+                        <tr>
+                            <td>使用场景痛点</td>
+                            <td>情景选择题（如"错过通知时正在？"）</td>
+                        </tr>
+                        <tr>
+                            <td>设计偏好</td>
+                            <td>图片偏好测试（A/B界面对比）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+            <h3>数据分析方法</h3>
+            <ul>
+                <li><strong>访谈数据</strong>：采用主题分析法，识别关键需求点</li>
+                <li><strong>问卷数据</strong>：使用SPSS进行描述性统计和相关性分析</li>
+            </ul>
+        </section>
+
+        <!-- PDF 下载 -->
+        <!-- <section id="report-download" class="section">
+            <a href="" class="pdf-download">点击下载完整报告（PDF 格式）</a>
+        </section> -->
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>本网站内容遵循山东大学人机交互课程的学术规范要求</p>
+        </div>
+    </footer>
+
+    <!-- 引入 Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    
+    <!-- 平滑滚动效果 -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
