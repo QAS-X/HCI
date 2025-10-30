@@ -69,6 +69,40 @@
         .container {
             padding: 0 20px;
         }
+        .data-table {
+            font-size: 0.9rem;
+        }
+        .affinity-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .affinity-table th, .affinity-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .affinity-table th {
+            background-color: #f2f2f2;
+        }
+        .sticky-notes {
+            column-count: 2;
+            column-gap: 20px;
+            margin: 1rem 0;
+        }
+        .sticky-note {
+            break-inside: avoid;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff9c4;
+            border-left: 4px solid #ffd54f;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .sticky-notes {
+                column-count: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -92,9 +126,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#data-collection">数据收集计划</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#report-download">PDF 下载</a>
-                    </li> -->   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#data-analysis">数据整理与分析</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -109,7 +143,7 @@
             <h2>团队成员</h2>
             <ul>
                 <li>丁润恒 - 负责访谈设计与执行</li>
-                <li>吴雨铉 - 负责问卷设计与数据分析</li>
+                <li>吴雨铉铉 - 负责问卷设计与数据分析</li>
                 <li>赵庆林 - 负责项目网页设计</li>
             </ul>
         </section>
@@ -198,10 +232,225 @@
             </ul>
         </section>
 
-        <!-- PDF 下载 -->
-        <!-- <section id="report-download" class="section">
-            <a href="" class="pdf-download">点击下载完整报告（PDF 格式）</a>
-        </section> -->
+        <!-- 新增：数据整理与分析 -->
+        <section id="data-analysis" class="section">
+            <h2>数据整理与分析</h2>
+            
+            <h3>（一）Survey数据分析报告</h3>
+            <p>本次调查共收集了10位有效样本（用户A-J），以下是详细的人口统计学特征描述：</p>
+            
+            <h4>人口统计学特征描述</h4>
+            <ul>
+                <li><strong>样本规模</strong>：N = 10</li>
+                <li><strong>专业分布</strong>：全部10位受访者（100%）的专业均为计算机科学与技术。具有高度的专业同质性，其结果能很好地反映该特定学生群体的需求和痛点。</li>
+                <li><strong>年级分布</strong>：
+                    <ul>
+                        <li>大一：1人 (10%)</li>
+                        <li>大二：2人 (20%)</li>
+                        <li>大三：3人 (30%)</li>
+                        <li>大四：2人 (20%)</li>
+                        <li>研一：2人 (20%)</li>
+                    </ul>
+                    <p><strong>分析</strong>：样本覆盖了从本科到研究生各个年级，分布较为均匀，能够捕捉不同学习阶段学生的可能差异。</p>
+                </li>
+                <li><strong>应用使用频率</strong>：
+                    <ul>
+                        <li>每日使用：4人 (A, C, F, H)，占比40%</li>
+                        <li>每周使用：6人 (B, D, E, G, I, J)，占比60%</li>
+                    </ul>
+                    <p><strong>分析</strong>：大部分用户（60%）为每周使用，但每日使用者也占相当比例（40%），表明现有平台是学生日常学习生活中不可或缺的工具，用户基础活跃。</p>
+                </li>
+            </ul>
+            
+            <h4>核心指标量化分析</h4>
+            <ol>
+                <li><strong>满意度与使用情况评分统计</strong>
+                    <ul>
+                        <li>日程满意度平均分：3.1/5（最高4分，最低2分）</li>
+                        <li>平台使用频率平均分：4.3/5（最高5分，最低3分）</li>
+                        <li>活动信息获取难度：2.9/5（分数越高越难）</li>
+                        <li>导航功能使用意愿：4.6/5（所有指标中最高）</li>
+                        <li>工具有效性评分：3.4/5</li>
+                        <li>简洁设计重要性：4.8/5（10人中有8人评为5分）</li>
+                    </ul>
+                </li>
+                <li><strong>对"最期望功能"进行词频统计发现</strong>：
+                    <ul>
+                        <li>作业跟踪（assignment tracker）：被提及7次</li>
+                        <li>成绩查询（grade overview）：被提及6次</li>
+                        <li>资源库（resource library）：被提及6次</li>
+                        <li>考试提醒（exam reminders）：被提及5次</li>
+                        <li>课表（class schedule）：被提及4次</li>
+                    </ul>
+                </li>
+                <li><strong>期望整合的服务排名</strong>：
+                    <ul>
+                        <li>活动公告（event announcements）：被提及7次</li>
+                        <li>校园地图（campus map）：被提及6次</li>
+                        <li>公交时刻表（bus schedule）：被提及6次</li>
+                        <li>食堂菜单（cafeteria menu）：被提及5次</li>
+                        <li>失物招领（lost & found）：被提及3次</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <h4>深入的数据洞察与发现</h4>
+            <ol>
+                <li><strong>使用模式与满意度关联分析</strong>
+                    <p>数据显示，每日使用者（A、C、F、H）的日程满意度平均分为3.5，高于每周使用者（B、D、E、G、I、J）的平均分2.8。这表明高频使用者对现有系统有相对较高的适应性，但整体满意度仍处于中等偏下水平。</p>
+                </li>
+                <li><strong>年级与需求差异分析</strong>
+                    <ul>
+                        <li>低年级学生（大一、大二）更关注"课表"和"作业跟踪"等基础功能</li>
+                        <li>高年级学生（大三、大四、研究生）对"资源库"和"成绩查询"需求更强烈</li>
+                        <li>研究生用户对"活动公告"和"校园导航"的整合需求明显高于本科生</li>
+                    </ul>
+                </li>
+                <li><strong>工具使用与信息遗漏关联</strong>
+                    <p>数据分析显示，使用单一工具（仅微信）的用户中，信息遗漏率达到67%（4/6），而使用组合工具（微信+邮件/LINE）的用户遗漏率为25%（1/4）。这表明工具多样性有助于降低信息遗漏风险。</p>
+                </li>
+            </ol>
+            
+            <img src="images/核心指标雷达图.png" alt="核心指标雷达图" width="50%" height="50%" style="display: block; margin: 0 auto;">
+            <h4>核心发现总结</h4>
+            <p>数据显示，核心用户画像：具备一定技术背景、深度依赖数字工具进行学习管理的年轻群体。他们的主要需求高度集中在课程管理（如作业跟踪、成绩查询）和校园资源整合（如活动公告、校园导航）两大类别。</p>
+            <ol>
+                <li><strong>"高频"与"低满意"并存</strong>：尽管用户使用现有平台很频繁（平均分4.3/5），但对日程管理的满意度却仅为中等水平（平均分3.1/5）。这表明用户可能存在"被动依赖"，当前工具并非因为他们非常满意，而是暂时没有更好的选择。</li>
+                <li><strong>对"一站式整合"的渴望超出预期</strong>：用户对导航整合功能表现出极高的意愿（平均分4.6/5），是所有评分中最高的。这强烈暗示，用户期望的应用不仅仅是一个工具，更是一个能解决校园信息孤岛问题的"统一门户"。</li>
+                <li><strong>现有活动组织工具存在明显短板</strong>：尽管微信是组织活动的主要工具，但其有效性评分一般（平均分3.4/5），且有高达60%的用户曾因此错过重要信息。这揭示了通用社交工具在特定场景下的不适应性，以及一个专注于校园活动组织的可靠工具存在的市场缺口。</li>
+            </ol>
+            
+            <h4>优化方向启示</h4>
+            <p>这些发现为产品优化指明了方向：首要任务是解决信息碎片化问题，强化平台的一站式整合能力；同时，应高度重视操作的简洁性设计；此外，开发或优化专门的活动组织模块，弥补现有工具的不足，也显得尤为重要。</p>
+            
+            <h3>（二）访谈数据分析报告</h3>
+            
+            <h4>数据整理与便签生成（Raw Data → Sticky Notes）</h4>
+            <p>从4位受访者的访谈中提取了关键信息，并将其拆解成 30+ 条"便签"式原始观点，方便进行亲和图聚类。</p>
+            
+            <div class="sticky-notes">
+                <div class="sticky-note">1. iShanda系统加载速度慢，希望能自动同步课程与作业提醒。</div>
+                <div class="sticky-note">2. 希望iShanda自动同步课程表并设置任务截止提醒。</div>
+                <div class="sticky-note">3. 校园App应内置地图导航，标注实验楼和打印店等位置。</div>
+                <div class="sticky-note">4. QQ/微信群消息太多，容易错过重要通知。</div>
+                <div class="sticky-note">5. 希望添加"课程公告区"以集中推送重要信息。</div>
+                <div class="sticky-note">6. 期望有统一App整合课程表、作业提醒和校园活动通知。</div>
+                <div class="sticky-note">7. 使用Notion记录作业，但无法同步课程信息，希望App支持自动导入任务。</div>
+                <div class="sticky-note">8. 校园活动信息分散，想在单一App里查看讲座、社团活动和选修信息。</div>
+                <div class="sticky-note">9. 希望在App里整合团队任务分配和活动报名功能。</div>
+                <div class="sticky-note">10. 重视界面美观与逻辑清晰的设计（UI/UX）。</div>
+                <div class="sticky-note">11. 课程与日历分开管理，导致重复记录和管理成本。</div>
+                <div class="sticky-note">12. 希望App能自动同步所有课程信息，避免手动重复录入。</div>
+                <div class="sticky-note">13. 希望App提供教室预约、设备借用和失物招领服务。</div>
+                <div class="sticky-note">14. 团队项目沟通不畅导致任务延期，希望有任务跟踪功能。</div>
+                <div class="sticky-note">15. 需要项目讨论区用于代码/项目协调与交流。</div>
+                <div class="sticky-note">16. 强调系统整合与自动化以减少重复性工作。</div>
+                <div class="sticky-note">17. 希望App能帮助制定学习计划、追踪进度并分析学习表现。</div>
+                <div class="sticky-note">18. 校园信息分散在官网、邮件和群组中，希望集中展示。</div>
+                <div class="sticky-note">19. 愿意有师生互动功能，例如老师反馈与问答。</div>
+                <div class="sticky-note">20. 期望支持匿名提问以降低提问心理门槛。</div>
+                <div class="sticky-note">21. 希望有课程讨论区便于学生间学术讨论与答疑。</div>
+                <div class="sticky-note">22. 希望有事件/讲座日历并支持一键报名与提醒。</div>
+                <div class="sticky-note">23. 需要通知去噪和优先级设置，避免信息淹没重要消息。</div>
+                <div class="sticky-note">24. 希望支持导入第三方工具（如Notion、Google Calendar）同步。</div>
+                <div class="sticky-note">25. 关注隐私与权限控制（谁能发公告、谁能评论）。</div>
+                <div class="sticky-note">26. 期待有自定义提醒策略（如提前1天/1小时提醒）。</div>
+                <div class="sticky-note">27. 希望App支持多设备同步与云端保存数据。</div>
+                <div class="sticky-note">28. 建议增加校园服务导航（打印/餐厅/实验室位置与营业时间）。</div>
+                <div class="sticky-note">29. 希望有资源预约历史和审核流程（谁借走了什么设备）。</div>
+                <div class="sticky-note">30. 希望提供个人任务看板（类似看板/Kanban）用于项目管理。</div>
+                <div class="sticky-note">31. 期望App能自动生成每周学习报告或学习榜单。</div>
+                <div class="sticky-note">32. 希望有社团/活动推荐机制，根据兴趣推送。</div>
+                <div class="sticky-note">33. 要求UI层次清楚，主次功能一目了然。</div>
+                <div class="sticky-note">34. 希望提供作业提交与成绩查看入口的统一入口。</div>
+                <div class="sticky-note">35. 建议增加反馈通道以便用户提交BUG与建议。</div>
+                <div class="sticky-note">36. 希望App具备权限分层与教师专属工具（布置作业、发布通知）。</div>
+            </div>
+            
+            <h4>亲和图构建与主题聚类（Affinity Diagramming Process）</h4>
+            <ol>
+                <li><strong>初步分类</strong>
+                    <p>将所有便签按关键词分组，形成三个初步类别：</p>
+                    <ul>
+                        <li>学习管理（Learning Management）</li>
+                        <li>校园生活（Campus Life）</li>
+                        <li>交流与互动（Communication & Interaction）</li>
+                    </ul>
+                </li>
+                <li><strong>主题聚合</strong>
+                    <p>在每个类别下进一步细分次级主题，如下表所示：</p>
+                    <table class="affinity-table">
+                        <thead>
+                            <tr>
+                                <th>一级主题</th>
+                                <th>二级主题</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">学习管理</td>
+                                <td>自动同步与任务提醒</td>
+                            </tr>
+                            <tr>
+                                <td>学习计划与数据分析</td>
+                            </tr>
+                            <tr>
+                                <td>项目管理与协作</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">校园生活</td>
+                                <td>信息整合</td>
+                            </tr>
+                            <tr>
+                                <td>校园服务</td>
+                            </tr>
+                            <tr>
+                                <td>地图与导航</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">交流与互动</td>
+                                <td>通知与公告</td>
+                            </tr>
+                            <tr>
+                                <td>团队协作</td>
+                            </tr>
+                            <tr>
+                                <td>师生互动</td>
+                            </tr>
+                            <tr>
+                                <td>学术交流</td>
+                            </tr>
+                            <tr>
+                                <td>全局设计</td>
+                                <td>系统整合与用户体验</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ol>
+            <h4>代码实现</h4>
+            <img src="images/代码实现.png" alt="代码实现" width="50%" height="50%" style="display: block; margin: 0 auto;">
+            <h4>亲和图</h4>
+            <img src="images/亲和图.png" alt="亲和图" width="50%" height="50%" style="display: block; margin: 0 auto;">
+            <h4>综合分析与主要发现（Synthesis and Findings）</h4>
+            <ol>
+                <li><strong>核心需求：统一整合的校园App生态系统</strong>
+                    <p>所有受访者均希望将课程、活动、任务、通知集中在一个平台中管理。当前信息分散（官网、邮件、群聊、独立App），效率低。</p>
+                </li>
+                <li><strong>学习管理功能需智能化与自动化</strong>
+                    <p>自动同步课程信息与任务截止日期是学生的主要痛点。进阶功能如"学习计划、进度分析、表现评估"有较高兴趣。</p>
+                </li>
+                <li><strong>校园信息服务应一体化与可视化</strong>
+                    <p>导航地图、活动整合、资源借用等服务应集成。强调"校园数字化助手"概念。</p>
+                </li>
+                <li><strong>交流方式需去噪与结构化</strong>
+                    <p>希望摆脱群聊杂乱的信息，使用结构化的"公告区"和"讨论区"。支持项目协作与师生互动模块。</p>
+                </li>
+                <li><strong>设计层面强调可用性与简洁性</strong>
+                    <p>学生普遍关注界面设计、信息层级与使用体验。"简洁、美观、逻辑清晰"是核心设计原则。</p>
+                </li>
+            </ol>
+        </section>
     </div>
 
     <!-- 页脚 -->
